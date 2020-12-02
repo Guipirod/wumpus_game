@@ -1,0 +1,8 @@
+build
+venv
+logs
+dist
+common/*/__pycache__
+__pycache__
+.idea
+wumpus.spec

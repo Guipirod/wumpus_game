@@ -1,0 +1,56 @@
+{"wumpus_03":
+  {
+    "GameName": "Wumpus",
+    "GridScale":
+    {
+      "height": 5,
+      "width": 4
+    },
+    "PlayerData": {
+      "location": {"x": 4, "y": 2},
+      "orientation": "N"
+    },
+    "GridElements": [
+      {
+        "type": "BottomlessPit",
+        "location": {"x": 3, "y": 0}
+      },
+      {
+        "type": "Pit",
+        "location": {"x": 3, "y": 3}
+      },
+      {
+        "type": "GoldExit",
+        "location": {"x": 0, "y": 2}
+      },
+      {
+        "type": "Wumpus",
+        "location": {"x": 1, "y": 1}
+      },
+      {
+        "type": "Gold",
+        "location": {"x": 2, "y": 2},
+        "amount": 1
+      },
+      {
+        "type": "Gold",
+        "location": {"x": -1, "y": -1},
+        "amount": 1,
+        "in_inventory": true
+      },
+      {
+        "type": "Bow",
+        "location": {"x": -1, "y": -1},
+        "in_inventory": true,
+        "amount": 1
+      },
+      {
+        "type": "Arrow",
+        "location": {"x": -1, "y": -1},
+        "in_inventory": true,
+        "amount": 5
+      }
+    ]
+  }
+
+}
