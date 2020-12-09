@@ -62,7 +62,8 @@ def initialize_aleatory_map() -> dict:
     game_data["GridElements"] = list()
 
     # Generate pits
-    total_pits = force_positive_int_input("Number of pits: ")
+    maximum_pits = max(game_data["GridScale"]["height"]*game_data["GridScale"]["width"]-4, 0)
+    total_pits = force_positive_int_input_with_threshold(f"Number of pits (max {maximum_pits}): ", maximum_pits)
     while total_pits > 0:
         element_x = randint(0, game_data["GridScale"]["height"]-1)
         element_y = randint(0, game_data["GridScale"]["width"]-1)

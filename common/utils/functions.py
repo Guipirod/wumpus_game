@@ -13,6 +13,14 @@ def force_positive_int_input(message: str) -> int:
     return int(player_input)
 
 
+def force_positive_int_input_with_threshold(message: str, upper_limit: int) -> int:
+    player_input = force_positive_int_input(message)
+    while player_input > upper_limit:
+        print(f'Choose a number <={upper_limit}')
+        player_input = force_positive_int_input(message)
+    return player_input
+
+
 def get_player_inventory(map_elements: list) -> list:
     return [element for element in map_elements if hasattr(element, 'in_inventory') and element.in_inventory]
 
