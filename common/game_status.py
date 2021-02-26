@@ -1,5 +1,5 @@
 from sys import exit
-from common.Logger import Logger
+from common.logger import Logger
 
 
 class GameStatus:

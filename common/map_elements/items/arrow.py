@@ -1,17 +1,14 @@
 from abc import ABC
 
-from common.GameStatus import GameStatus
-from common.map_elements.items.GameItem import GameItem
+from common.game_status import GameStatus
+from common.map_elements.items.game_item import GameItem
 
 
 class Arrow(GameItem, ABC):
 
-    def __init__(self, game_status: GameStatus, position_x: int, position_y: int):
-        super().__init__(game_status, position_x, position_y)
-
-        self._description = 'a pointy arrow, ammunition for a bow'
-        self._hint_presence = 'You see some arrows on the ground'
-        self._player_use_event = 'You need a bow in order to use an arrow'
+    _description = 'a pointy arrow, ammunition for a bow'
+    _hint_presence = 'You see some arrows on the ground'
+    _player_use_event = 'You need a bow in order to use an arrow'
 
     @property
     def name(self):

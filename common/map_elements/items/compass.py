@@ -1,20 +1,17 @@
 from abc import ABC
 
-from common.GameStatus import GameStatus
-from common.map_elements.items.GameItem import GameItem
+from common.game_status import GameStatus
+from common.map_elements.items.game_item import GameItem
 
 
 class Compass(GameItem, ABC):
 
-    def __init__(self, game_status: GameStatus, position_x: int, position_y: int):
-        super().__init__(game_status, position_x, position_y)
+    _cardinal_directions = {"N": "north", "S": "south", "W": "west", "E": "east"}
 
-        self._cardinal_directions = {"N": "north", "S": "south", "W": "west", "E": "east"}
-
-        self._description = "a compass, can help you to orientate"
-        self._hint_presence = "There is a compass on the ground"
-        self._take_compass = "You must take the compass to use it"
-        self._orientation = "You check the compass, you are facing {}"
+    _description = "a compass, can help you to orientate"
+    _hint_presence = "There is a compass on the ground"
+    _take_compass = "You must take the compass to use it"
+    _orientation = "You check the compass, you are facing {}"
 
     @property
     def name(self):

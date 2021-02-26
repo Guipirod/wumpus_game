@@ -1,10 +1,10 @@
 import pytest
 
-from common.map_elements.actors.GameActor import GameActor
-from common.map_elements.actors.Wumpus import Wumpus
-from common.map_elements.items.Arrow import Arrow
-from common.map_elements.items.Bow import Bow
-from common.map_elements.items.Gold import Gold
+from common.map_elements.actors.game_actor import GameActor
+from common.map_elements.actors.wumpus import Wumpus
+from common.map_elements.items.arrow import Arrow
+from common.map_elements.items.bow import Bow
+from common.map_elements.items.gold import Gold
 from common.utils.functions import *
 
 

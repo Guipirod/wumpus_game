@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from common.GameStatus import GameStatus
-from common.map_elements.MapElement import MapElement
+from common.game_status import GameStatus
+from common.map_elements.map_element import MapElement
 
 
 class GameActor(MapElement, ABC):

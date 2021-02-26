@@ -1,6 +1,6 @@
 from inspect import ismodule, isclass, getmembers
 
-from common.GameStatus import GameStatus
+from common.game_status import GameStatus
 from common.map_elements import actors
 from common.map_elements import basic
 from common.map_elements import items
@@ -93,6 +93,13 @@ def call_near_elements_functions(game_status: GameStatus, map_elements: list):
             result = element.on_proximity()
             if callable(result):
                 result(game_status, map_elements)
+
+
+def call_element_act_functions(game_status: GameStatus, map_elements: list):
+    for element in map_elements:
+        result = element.act()
+        if callable(result):
+            result(game_status, map_elements)
 
 
 def use_element(game_status: GameStatus, map_elements: list, map_element):
