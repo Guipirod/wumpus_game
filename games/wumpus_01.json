@@ -1,52 +1,49 @@
-{"wumpus_01":
+{
+  "GameName": "Wumpus",
+  "GridScale":
   {
-    "GameName": "Wumpus",
-    "GridScale":
+    "height": 4,
+    "width": 4
+  },
+  "PlayerData": {
+    "location": {"x": 3, "y": 0},
+    "orientation": "N"
+  },
+  "GridElements": [
     {
-      "height": 4,
-      "width": 4
+      "type": "Gold",
+      "location": {"x": 1, "y": 1}
     },
-    "PlayerData": {
-      "location": {"x": 3, "y": 0},
-      "orientation": "N"
+    {
+      "type": "Wumpus",
+      "location": {"x": 1, "y": 0}
     },
-    "GridElements": [
-      {
-        "type": "Gold",
-        "location": {"x": 1, "y": 1}
-      },
-      {
-        "type": "Wumpus",
-        "location": {"x": 1, "y": 0}
-      },
-      {
-        "type": "Pit",
-        "location": {"x": 3, "y": 2}
-      },
-      {
-        "type": "BottomlessPit",
-        "location": {"x": 1, "y": 2}
-      },
-	  {
-        "type": "BottomlessPit",
-        "location": {"x": 0, "y": 3}
-      },
-      {
-        "type": "GoldExit",
-        "location": {"x": 3, "y": 0}
-      },
-      {
-        "type": "Bow",
-        "location": {"x": -1, "y": -1},
-        "in_inventory": true
-      },
-      {
-        "type": "Arrow",
-        "location": {"x": -1, "y": -1},
-        "in_inventory": true,
-        "amount": 5
-      }
-    ]
-  }
-
+    {
+      "type": "Pit",
+      "location": {"x": 3, "y": 2}
+    },
+    {
+      "type": "BottomlessPit",
+      "location": {"x": 1, "y": 2}
+    },
+    {
+      "type": "BottomlessPit",
+      "location": {"x": 0, "y": 3}
+    },
+    {
+      "type": "GoldExit",
+      "location": {"x": 3, "y": 0}
+    },
+    {
+      "type": "Bow",
+      "location": {"x": -1, "y": -1},
+      "in_inventory": true
+    },
+    {
+      "type": "Arrow",
+      "location": {"x": -1, "y": -1},
+      "in_inventory": true,
+      "amount": 5
+    }
+  ]
 }

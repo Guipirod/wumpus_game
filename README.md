@@ -12,7 +12,7 @@ Download the game then move to its root directory and install the dependencies w
 
 Execute the game by running:
 
-```python wumpus.py```
+```python wumpus_game.py```
 
 Logs of each game will be saved on the **/logs** folder.
 
@@ -66,7 +66,7 @@ And interact with the following elements:
 
 You can make the game draw the map on each turn by adding the "**--debug**" command:
 
-```python wumpus.py --debug```
+```python wumpus_game.py --debug```
 
 Each game element will be represented as one of the following characters:
 * **w**: Wumpus

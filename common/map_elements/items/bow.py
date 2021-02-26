@@ -1,22 +1,19 @@
 from abc import ABC
 
-from common.GameStatus import GameStatus
-from common.map_elements.items.GameItem import GameItem
+from common.game_status import GameStatus
+from common.map_elements.items.game_item import GameItem
 from common.utils.functions import get_living_actors_in_coordinates, get_first_inventory_element_with_name, \
     delete_element_from_game
 
 
 class Bow(GameItem, ABC):
 
-    def __init__(self, game_status: GameStatus, position_x: int, position_y: int):
-        super().__init__(game_status, position_x, position_y)
-
-        self._description = 'a bow, you can fire it if you happen to have arrows'
-        self._hint_presence = 'You see a bow laying on the floor near your feet'
-        self._player_use_event = 'You aim to the darkness and shoot your bow'
-        self._no_target = 'But nothing happens...'
-        self._no_arrows = 'You are out of arrows...'
-        self._take_first_hint = 'You should take the bow from the ground if you want to use it'
+    _description = 'a bow, you can fire it if you happen to have arrows'
+    _hint_presence = 'You see a bow laying on the floor near your feet'
+    _player_use_event = 'You aim to the darkness and shoot your bow'
+    _no_target = 'But nothing happens...'
+    _no_arrows = 'You are out of arrows...'
+    _take_first_hint = 'You should take the bow from the ground if you want to use it'
 
     @property
     def name(self):

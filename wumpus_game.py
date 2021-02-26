@@ -3,13 +3,14 @@ import json
 import sys
 from random import randint, choice
 
-from common.map_elements.actors.Wumpus import Wumpus
-from common.map_elements.basic.BottomlessPit import BottomlessPit
-from common.map_elements.basic.GoldExit import GoldExit
-from common.map_elements.items.Arrow import Arrow
-from common.map_elements.items.Bow import Bow
-from common.map_elements.items.Compass import Compass
-from common.map_elements.items.Gold import Gold
+from common.map_elements.actors.wumpus import Wumpus
+from common.map_elements.actors.shia_labeouf import ShiaLaBeouf
+from common.map_elements.basic.bottomless_pit import BottomlessPit
+from common.map_elements.basic.gold_exit import GoldExit
+from common.map_elements.items.arrow import Arrow
+from common.map_elements.items.bow import Bow
+from common.map_elements.items.compass import Compass
+from common.map_elements.items.gold import Gold
 from common.utils.functions import *
 
 # GAME INITIALIZATION
@@ -18,7 +19,7 @@ from common.utils.functions import *
 def read_game_file(file_name: str) -> dict:
     with open(os.path.join('games', file_name)) as open_file:
         file_text = open_file.read()
-    return json.loads(file_text)[file_name.replace('.json', '')]
+    return json.loads(file_text)
 
 
 def initialize_game_status(data_dict: dict) -> GameStatus:
@@ -203,6 +204,8 @@ def primary_loop(game_status: GameStatus, map_elements: list, debug_mode_on: boo
         call_found_elements_functions(game_status, map_elements)
         game_status.end_game_if_triggered()
         call_near_elements_functions(game_status, map_elements)
+        game_status.end_game_if_triggered()
+        call_element_act_functions(game_status, map_elements)
         game_status.end_game_if_triggered()
 
         if debug_mode_on:

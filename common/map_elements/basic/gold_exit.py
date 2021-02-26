@@ -1,22 +1,19 @@
 from abc import ABC
 
-from common.GameStatus import GameStatus
-from common.map_elements.MapElement import MapElement
+from common.game_status import GameStatus
+from common.map_elements.map_element import MapElement
 from common.utils.functions import player_has_item_with_name
 
 
 class GoldExit(MapElement, ABC):
 
-    def __init__(self, game_status: GameStatus, position_x: int, position_y: int):
-        super().__init__(game_status, position_x, position_y)
-
-        self._player_victory_event = "You have your gold, you avoided the monster...\n" \
-                                     "Now you can safely run away and leave this wretched place.\n\n" \
-                                     "YOU WIN"
-        self._player_needs_gold = "You came to this forest looking for gold, and you are not going to " \
-                                  "run away empty-handed"
-        self._description = "an exit, a safe scape from this dark forest"
-        self._log_victory = "You won by exiting the forest"
+    _player_victory_event = "You have your gold, you avoided the monster...\n" \
+                                 "Now you can safely run away and leave this wretched place.\n\n" \
+                                 "YOU WIN"
+    _player_needs_gold = "You came to this forest looking for gold, and you are not going to " \
+                              "run away empty-handed"
+    _description = "an exit, a safe scape from this dark forest"
+    _log_victory = "You won by exiting the forest"
 
     @property
     def name(self):

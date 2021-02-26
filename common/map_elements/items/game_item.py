@@ -1,7 +1,7 @@
 from abc import ABC
 
-from common.GameStatus import GameStatus
-from common.map_elements.MapElement import MapElement
+from common.game_status import GameStatus
+from common.map_elements.map_element import MapElement
 from common.utils.functions import get_first_inventory_element_with_name, get_player_inventory, \
     get_first_map_element_in_player_position
 

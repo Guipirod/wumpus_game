@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from common.GameStatus import GameStatus
+from common.game_status import GameStatus
 
 
 class MapElement:
